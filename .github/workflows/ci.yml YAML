@@ -1,0 +1,36 @@
+name: CI - Lint & Test Basics
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'   # match what you use locally / what Streamlit Cloud expects
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Check syntax (compile)
+        run: python -m py_compile app.py
+
+      - name: Basic lint with flake8 (optional but recommended)
+        run: |
+          pip install flake8
+          flake8 app.py --count --select=E9,F63,F7,F82 --show-source --statistics
+          # You can make it stricter later: --max-line-length=88 etc.
