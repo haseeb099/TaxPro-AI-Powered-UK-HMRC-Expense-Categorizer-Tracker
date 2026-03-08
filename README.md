@@ -13,8 +13,8 @@ Designed to help reduce your Self Assessment tax bill by identifying **deductibl
 ![HMRC Compliant](https://img.shields.io/badge/HMRC-2025%2F26--2026%2F27-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Live Demo**
-## Tax Pro AI – UK HMRC Assistant
+**Tax Pro AI – UK HMRC Assistant**
+## Live Demo
 
 AI-powered tool for UK tax questions, HMRC rules, self-assessment help, allowances, deadlines & more.
 
