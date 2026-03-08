@@ -13,7 +13,8 @@ Designed to help reduce your Self Assessment tax bill by identifying **deductibl
 ![HMRC Compliant](https://img.shields.io/badge/HMRC-2025%2F26--2026%2F27-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Live Demo** (once deployed): [https://your-app-name.streamlit.app/  ](https://taxpro-uk-hmrc-expense-categorizer-tracker.streamlit.app/)
+**Live Demo** (once deployed): https://taxpro-uk-hmrc-expense-categorizer-tracker.streamlit.app/
+
 **Current version**: v0.3 • Local SQLite • Multi-LLM support
 
 ## ✨ Core Features
