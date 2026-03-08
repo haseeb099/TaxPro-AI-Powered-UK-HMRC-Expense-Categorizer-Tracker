@@ -44,9 +44,8 @@ Designed to help reduce your Self Assessment tax bill by identifying **deductibl
   • OpenRouter (free credits) → DeepSeek, Qwen, etc.  
   • OpenAI (paid) → gpt-4o-mini
 
-## 📸 Screenshots (add your own later)
-
-(Add 3–5 images here: upload screen, analysis results, dashboard chart, expense list, expander details)
+## 📸 Screenshots
+<img width="627" height="544" alt="TaxPro" src="https://github.com/user-attachments/assets/5fceffec-05e9-4de2-90a6-6a331de56dbe" />
 
 ## 🚀 Quick Start (Local)
 
