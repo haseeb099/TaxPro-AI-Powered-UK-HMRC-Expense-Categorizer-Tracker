@@ -1,7 +1,7 @@
 # AI Powered TaxPro-UK HMRC Expense Categorizer Tracker
 AI-powered UK expense tracker: HMRC-compliant categorization, OCR receipt scanning, spending insights &amp; tax estimates for Self Assessment. Built with Streamlit — save on taxes easily!
 
-# 💼 TaxPro UK – HMRC Expense Categorizer & Tracker
+# 💼 Tax Pro AI UK – HMRC Expense Categorizer & Tracker
 
 **AI-powered Streamlit app for UK sole traders, freelancers & self-employed**  
 Upload receipts (PDF/image), paste text, or describe cash spends → AI analyzes & categorizes expenses according to **current HMRC allowable rules** → saves to local database → view, export & get basic tax insights.
@@ -13,7 +13,14 @@ Designed to help reduce your Self Assessment tax bill by identifying **deductibl
 ![HMRC Compliant](https://img.shields.io/badge/HMRC-2025%2F26--2026%2F27-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Live Demo** (once deployed): https://taxpro-uk-hmrc-expense-categorizer-tracker.streamlit.app/
+**Live Demo**
+## Tax Pro AI – UK HMRC Assistant
+
+AI-powered tool for UK tax questions, HMRC rules, self-assessment help, allowances, deadlines & more.
+
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://tax-pro-ai-uk-hmrc.streamlit.app/)
+
+AI assistant for UK taxpayers – powered by LLMs • Fast answers on tax rules, reliefs, filing & more.
 
 **Current version**: v0.3 • Local SQLite • Multi-LLM support
 
