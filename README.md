@@ -59,7 +59,7 @@ AI assistant for UK taxpayers – powered by LLMs • Fast answers on tax rules,
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/haseeb099/TaxPro-UK-HMRC-Expense-Categorizer-Tracker.git
+   git clone https://github.com/haseeb099/TaxPro-AI-Powered-UK-HMRC-Expense-Categorizer-Tracker.git
    cd TaxPro-UK-HMRC-Expense-Categorizer-Tracker
 
 Create virtual environment Bash python -m venv venv
