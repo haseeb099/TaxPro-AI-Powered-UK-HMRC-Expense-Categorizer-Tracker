@@ -136,7 +136,7 @@ Built with ❤️ for UK freelancers & sole traders --- save time & money this t
 
 ⭐ If it helps you --- star the repo! Questions → open an issue.
 
-Happy tracking & lower taxes! 🇬🇧💰
+Happy tracking & lower taxes!! 🇬🇧💰
 
 
 
