@@ -1,143 +1,140 @@
-# AI Powered TaxPro-UK HMRC Expense Categorizer Tracker
-AI-powered UK expense tracker: HMRC-compliant categorization, OCR receipt scanning, spending insights &amp; tax estimates for Self Assessment. Built with Streamlit — save on taxes easily!
-
-# 💼 Tax Pro AI UK – HMRC Expense Categorizer & Tracker
-
-**AI-powered Streamlit app for UK sole traders, freelancers & self-employed**  
-Upload receipts (PDF/image), paste text, or describe cash spends → AI analyzes & categorizes expenses according to **current HMRC allowable rules** → saves to local database → view, export & get basic tax insights.
-
-Designed to help reduce your Self Assessment tax bill by identifying **deductible amounts** intelligently — while keeping everything local and free (Groq / OpenRouter support).
+# TaxPro-AI: HMRC-Compliant Expense Categorizer & Tracker
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30+-FF4B4B)](https://streamlit.io/)
 ![HMRC Compliant](https://img.shields.io/badge/HMRC-2025%2F26--2026%2F27-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Tax Pro AI – UK HMRC Assistant**
-## Live Demo
+An AI-powered application designed for UK sole traders, freelancers, and self-employed individuals to streamline expense categorization and tracking in compliance with HMRC guidelines. TaxPro-AI leverages advanced AI models to process receipts, categorize expenditures, and provide actionable insights for Self Assessment tax returns.
 
-AI-powered tool for UK tax questions, HMRC rules, self-assessment help, allowances, deadlines & more.
+## ✨ Features
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://tax-pro-ai-uk-hmrc.streamlit.app/)
+-   **HMRC-Aligned AI Categorization**: Utilizes AI to categorize expenses based on current HMRC allowable rules (2025/26–2026/27), including categories such as Office Costs, Travel & Subsistence, Motor Expenses, Home Office, Equipment & Tools, Stock, Marketing, Professional Fees, Insurance, Staff, Clothing, and Other Allowable expenses.
+-   **Multi-source Input**: Supports various input methods for expense data:
+    -   PDF receipts/statements (with text extraction and basic OCR fallback)
+    -   Image uploads (JPG/PNG) with EasyOCR text extraction
+    -   Manual entry for cash expenses or text descriptions
+-   **Smart JSON Output**: AI models extract key expense details into a structured JSON format, including date, description, category, amount_gbp, business_use_%, deductible_amount, VAT reclaimable, and notes.
+-   **Local SQLite Database**: Ensures persistent tracking of all saved expenses, including timestamp, business type, and source, stored securely in a local database.
+-   **Interactive Interface**: Features an intuitive Streamlit interface with dedicated tabs for:
+    -   📥 **Add / Analyze**: Upload and AI-process new expenses.
+    -   📋 **List & Export**: View and export expense data (DataFrame + CSV download).
+    -   📊 **Dashboard**: Visualize monthly deductible expenses and total summaries.
+    -   💡 **Tax Advice**: A placeholder for future expansion into personalized tax guidance.
+-   **Flexible LLM Backends**: Supports various Large Language Model (LLM) providers for AI processing, offering cost-effective and high-performance options:
+    -   Groq (e.g., Llama 3.1/3.3 models) for rapid processing.
+    -   OpenRouter (e.g., DeepSeek, Qwen) for diverse model access.
+    -   OpenAI (e.g., gpt-4o-mini) for robust AI capabilities.
 
-AI assistant for UK taxpayers – powered by LLMs • Fast answers on tax rules, reliefs, filing & more.
+## 🚀 Getting Started
 
-**Current version**: v0.3 • Local SQLite • Multi-LLM support
+### Prerequisites
 
-## ✨ Core Features
+-   Python 3.10+
+-   `pip` package manager
 
-- **HMRC-aligned AI Categorization** (2025/26–2026/27 rules)  
-  One category per item from official-style list:  
-  `Office Costs | Travel & Subsistence | Motor Expenses | Home Office | Equipment & Tools | Stock | Marketing | Professional Fees | Insurance | Staff | Clothing | Other Allowable`
+### Installation
 
-- **Multi-source Input**  
-  • Upload PDF receipts/statements (text + basic OCR fallback)  
-  • Upload images (JPG/PNG) → EasyOCR text extraction  
-  • Paste raw text or describe cash expenses manually
+1.  **Clone the repository**:
 
-- **Smart JSON Output from LLM**  
-  Extracts: date, description, category, amount_gbp, business_use_%, deductible_amount, VAT reclaimable, notes
+    ```bash
+    git clone https://github.com/haseeb099/TaxPro-AI-Powered-UK-HMRC-Expense-Categorizer-Tracker.git
+    cd TaxPro-AI-Powered-UK-HMRC-Expense-Categorizer-Tracker
+    ```
 
-- **Local SQLite Database**  
-  Persistent tracking of all saved expenses + timestamp + business type + source
+2.  **Create a virtual environment**:
 
-- **Interactive Tabs**  
-  • 📥 Add / Analyze (upload + AI)  
-  • 📋 List & Export (DataFrame + CSV download)  
-  • 📊 Dashboard (monthly deductible bar chart + total)  
-  • 💡 Tax Advice (placeholder - expand later)
+    ```bash
+    python -m venv venv
+    # On Windows
+    .\venv\Scripts\activate
+    # On macOS/Linux
+    source venv/bin/activate
+    ```
 
-- **Flexible LLM Backends** (all free/low-cost options)  
-  • Groq (very fast & free tier) → Llama 3.1/3.3 models  
-  • OpenRouter (free credits) → DeepSeek, Qwen, etc.  
-  • OpenAI (paid) → gpt-4o-mini
+3.  **Install dependencies**:
 
-## 📸 Screenshots
-<img width="627" height="544" alt="TaxPro" src="https://github.com/user-attachments/assets/5fceffec-05e9-4de2-90a6-6a331de56dbe" />
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## 🚀 Quick Start (Local)
+    *Note: If `requirements.txt` is missing, create it with the following content:*
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/haseeb099/TaxPro-AI-Powered-UK-HMRC-Expense-Categorizer-Tracker.git
-   cd TaxPro-UK-HMRC-Expense-Categorizer-Tracker
+    ```
+    streamlit
+    openai
+    python-dotenv
+    pandas
+    PyPDF2
+    easyocr
+    pillow
+    numpy
+    ```
 
-Create virtual environment Bash python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-Install dependencies Bash pip install -r requirements.txt(Create requirements.txt if missing  see below)
+    *(Optional: Install `torch` for GPU acceleration with EasyOCR if available.)*
 
-# Set up API key(s)
-Create .env file in root:textGROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-# or
-OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxxxxxxxxxx
-# or
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx
+4.  **Set up API key(s)**:
 
-Run the app Bash streamlit run app.py→ Open http://localhost:8501
+    Create a `.env` file in the root directory of the project and add your API key(s) for your chosen LLM backend. Example:
 
+    ```ini
+    GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    # or
+    OPENROUTER_API_KEY=sk-or-v1-xxxxxxxxxxxxxxxxxxxx
+    # or
+    OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx
+    ```
 
-## 🛠 Requirements (requirements.txt)
--   streamlit
--   openai
--   python-dotenv
--   pandas
--   PyPDF2
--   easyocr
--   pillow
--   numpy
+5.  **Run the application**:
 
-(Optional extras: torch if you want GPU OCR acceleration with EasyOCR)
+    ```bash
+    streamlit run app.py
+    ```
 
-⚠️ Important Notes & Limitations
---------------------------------
+    The application will open in your web browser at `http://localhost:8501`.
 
--   **Not professional tax advice** --- Always verify categories, amounts and deductibility with a qualified accountant or HMRC. Rules change; this uses simplified 2025/26--2026/27 logic.
--   **Database**: Local expenses.db --- does **not persist** on Streamlit Cloud (ephemeral filesystem). Use cloud DB (Supabase, PostgreSQL) for production.
--   **OCR**: Basic EasyOCR implementation. Scanned PDFs may need better preprocessing/conversion to images (future improvement).
--   **Token limits**: Truncates input to ~3500 chars --- good for single receipts, less ideal for long statements.
--   **No user auth yet** --- single-user local app for now.
+## ⚠️ Important Notes & Limitations
 
-📈 Roadmap & Future Enhancements
---------------------------------
+-   **Not Professional Tax Advice**: This tool is for informational purposes only and should not be considered professional tax advice. Always verify categories, amounts, and deductibility with a qualified accountant or HMRC. Tax rules are subject to change.
+-   **Database Persistence**: The local `expenses.db` does not persist on ephemeral file systems (e.g., Streamlit Cloud). For production deployments, consider using a persistent cloud database solution like Supabase or PostgreSQL.
+-   **OCR Limitations**: The basic EasyOCR implementation may require better preprocessing or conversion of scanned PDFs to images for optimal results. This is an area for future improvement.
+-   **Token Limits**: Input text is truncated to approximately 3500 characters, suitable for single receipts but less ideal for very long statements.
+-   **No User Authentication**: Currently, this is a single-user local application without built-in user authentication.
 
--   Persistent cloud database (Supabase free tier / SQLite on mounted volume)
--   Full mileage calculator (HMRC 45p/25p rates)
--   Income tracking → basic Self Assessment preview (profit, tax estimate)
--   Better PDF OCR (page-by-page image conversion + layout analysis)
--   VAT handling improvements (20% reclaim logic per category)
--   Multi-user support + simple login
--   Export to Excel + HMRC-compatible CSV format
--   More models + prompt engineering for higher accuracy
+## 📈 Roadmap & Future Enhancements
 
-🤝 Contributing
----------------
+-   **Cloud Database Integration**: Implement persistent cloud database solutions (e.g., Supabase free tier, SQLite on mounted volumes).
+-   **Mileage Calculator**: Develop a comprehensive mileage calculator based on HMRC rates (45p/25p).
+-   **Income Tracking & Self Assessment Preview**: Introduce income tracking features and a basic Self Assessment preview (profit, tax estimate).
+-   **Advanced PDF OCR**: Enhance PDF processing with page-by-page image conversion and layout analysis for improved OCR accuracy.
+-   **VAT Handling**: Improve VAT reclaim logic (e.g., 20% reclaim per category).
+-   **Multi-user Support**: Implement user authentication and multi-user capabilities.
+-   **Export Options**: Add export functionality to Excel and HMRC-compatible CSV formats.
+-   **Model Optimization**: Continuously refine LLM prompts and explore additional models for higher accuracy and performance.
 
-Love to have help! Especially:
+## 🤝 Contributing
 
--   Improve OCR reliability
--   Add more HMRC-specific prompts/rules
--   Implement income/tax estimate tab
--   Tests (pytest)
--   UI polish & loading indicators
+Contributions are welcome! If you'd like to contribute, please follow these steps:
 
-Fork → branch → PR Use conventional commits if possible (feat:, fix:, docs:, etc.)
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and ensure tests pass (if applicable).
+4.  Submit a pull request. Please use conventional commits (e.g., `feat:`, `fix:`, `docs:`) if possible.
 
-📄 License
-----------
+Areas where contributions are particularly valuable:
 
-MIT License --- free to use, modify, distribute. See LICENSE file.
+-   Improving OCR reliability.
+-   Adding more HMRC-specific prompts and rules.
+-   Implementing income/tax estimate features.
+-   Developing comprehensive tests (e.g., using `pytest`).
+-   Enhancing UI polish and adding loading indicators.
 
-* * * * *
+## 📄 License
 
-Built with ❤️ for UK freelancers & sole traders --- save time & money this tax season!
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-⭐ If it helps you --- star the repo! Questions → open an issue.
+---
 
-Happy tracking & lower taxes!! 🇬🇧💰
+Built with ❤️ for UK freelancers & sole traders. If this project helps you, please consider starring the repository! For questions or issues, feel free to open an issue.
 
-
-
-```
+Happy tracking & lower taxes! 🇬🇧💰
